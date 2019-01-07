@@ -3,7 +3,7 @@
 <eagle version="9.2.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.127" altunitdist="mm" altunit="mm"/>
@@ -101,6 +101,10 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="133" name="bottom_silk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="134" name="silk_top" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="135" name="silk_bottom" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="136" name="silktop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="138" name="GND@2" color="7" fill="1" visible="no" active="yes"/>
 <layer number="144" name="DrillLegend" color="7" fill="1" visible="no" active="yes"/>
 <layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="no" active="yes"/>
@@ -111,6 +115,8 @@
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="no" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="166" name="AntennaArea" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
 <layer number="200" name="200bmp" color="7" fill="1" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="7" fill="1" visible="no" active="yes"/>
@@ -233,8 +239,8 @@
 <wire x1="-1.143" y1="-1.27" x2="-1.143" y2="13.97" width="0.0254" layer="21" style="shortdash"/>
 <text x="0" y="14.605" size="1.27" layer="21" rot="R90" align="center-left">&gt;NAME</text>
 </package>
-<package name="PROTO_VIA" urn="urn:adsk.eagle:footprint:7615392/1" library_version="25">
-<pad name="1" x="0" y="0" drill="0.6"/>
+<package name="PROTO_VIA" urn="urn:adsk.eagle:footprint:7615392/3" library_version="27">
+<pad name="1" x="0" y="0" drill="1.143" diameter="1.778"/>
 <text x="2.54" y="0" size="1.27" layer="21" align="center-left">&gt;NAME</text>
 </package>
 </packages>
@@ -244,7 +250,7 @@
 <packageinstance name="C2_IO_VIAS"/>
 </packageinstances>
 </package3d>
-<package3d name="PROTO_VIA" urn="urn:adsk.eagle:package:7615393/1" type="box" library_version="25">
+<package3d name="PROTO_VIA" urn="urn:adsk.eagle:package:7615393/3" type="box" library_version="27">
 <packageinstances>
 <packageinstance name="PROTO_VIA"/>
 </packageinstances>
@@ -253,35 +259,35 @@
 </library>
 <library name="VCO-Eagle_parts" urn="urn:adsk.eagle:library:4288890">
 <packages>
-<package name="ESP32_FEATHER" urn="urn:adsk.eagle:footprint:5613284/1" library_version="56">
-<pad name="RESET" x="-10.16" y="19.05" drill="0.6" shape="square"/>
-<pad name="3.3V" x="-10.16" y="16.51" drill="0.6" shape="square"/>
-<pad name="NC" x="-10.16" y="13.97" drill="0.6" shape="square"/>
-<pad name="GND" x="-10.16" y="11.43" drill="0.6" shape="square"/>
-<pad name="A0_DAC2" x="-10.16" y="8.89" drill="0.6" shape="square"/>
-<pad name="A1_DAC1" x="-10.16" y="6.35" drill="0.6" shape="square"/>
-<pad name="A2_IO34" x="-10.16" y="3.81" drill="0.6" shape="square"/>
-<pad name="A3_IO39" x="-10.16" y="1.27" drill="0.6" shape="square"/>
-<pad name="A4_IO36" x="-10.16" y="-1.27" drill="0.6" shape="square"/>
-<pad name="A5_IO4" x="-10.16" y="-3.81" drill="0.6" shape="square"/>
-<pad name="SCK" x="-10.16" y="-6.35" drill="0.6" shape="square"/>
-<pad name="MOSI" x="-10.16" y="-8.89" drill="0.6" shape="square"/>
-<pad name="MISO" x="-10.16" y="-11.43" drill="0.6" shape="square"/>
-<pad name="IO16" x="-10.16" y="-13.97" drill="0.6" shape="square" rot="R180"/>
-<pad name="IO17" x="-10.16" y="-16.51" drill="0.6" shape="square"/>
-<pad name="IO21" x="-10.16" y="-19.05" drill="0.6" shape="square"/>
-<pad name="SDA" x="10.16" y="-19.05" drill="0.6" shape="square"/>
-<pad name="SCL" x="10.16" y="-16.51" drill="0.6" shape="square"/>
-<pad name="A6_IO14" x="10.16" y="-13.97" drill="0.6" shape="square"/>
-<pad name="A7_IO32" x="10.16" y="-11.43" drill="0.6" shape="square"/>
-<pad name="A8_IO15" x="10.16" y="-8.89" drill="0.6" shape="square"/>
-<pad name="A9_IO33" x="10.16" y="-6.35" drill="0.6" shape="square"/>
-<pad name="A10_IO27" x="10.16" y="-3.81" drill="0.6" shape="square"/>
-<pad name="A11_IO12" x="10.16" y="-1.27" drill="0.6" shape="square"/>
-<pad name="A12_IO13" x="10.16" y="1.27" drill="0.6" shape="square"/>
-<pad name="VBUS" x="10.16" y="3.81" drill="0.6" shape="square"/>
-<pad name="EN" x="10.16" y="6.35" drill="0.6" shape="square"/>
-<pad name="VBAT" x="10.16" y="8.89" drill="0.6" shape="square"/>
+<package name="ESP32_FEATHER" urn="urn:adsk.eagle:footprint:5613284/2" library_version="62">
+<pad name="RESET" x="-10.16" y="19.05" drill="1.27" shape="square"/>
+<pad name="3.3V" x="-10.16" y="16.51" drill="1.27" shape="square"/>
+<pad name="NC" x="-10.16" y="13.97" drill="1.27" shape="square"/>
+<pad name="GND" x="-10.16" y="11.43" drill="1.27" shape="square"/>
+<pad name="A0_DAC2" x="-10.16" y="8.89" drill="1.27" shape="square"/>
+<pad name="A1_DAC1" x="-10.16" y="6.35" drill="1.27" shape="square"/>
+<pad name="A2_IO34" x="-10.16" y="3.81" drill="1.27" shape="square"/>
+<pad name="A3_IO39" x="-10.16" y="1.27" drill="1.27" shape="square"/>
+<pad name="A4_IO36" x="-10.16" y="-1.27" drill="1.27" shape="square"/>
+<pad name="A5_IO4" x="-10.16" y="-3.81" drill="1.27" shape="square"/>
+<pad name="SCK" x="-10.16" y="-6.35" drill="1.27" shape="square"/>
+<pad name="MOSI" x="-10.16" y="-8.89" drill="1.27" shape="square"/>
+<pad name="MISO" x="-10.16" y="-11.43" drill="1.27" shape="square"/>
+<pad name="IO16" x="-10.16" y="-13.97" drill="1.27" shape="square" rot="R180"/>
+<pad name="IO17" x="-10.16" y="-16.51" drill="1.27" shape="square"/>
+<pad name="IO21" x="-10.16" y="-19.05" drill="1.27" shape="square"/>
+<pad name="SDA" x="10.16" y="-19.05" drill="1.27" shape="square"/>
+<pad name="SCL" x="10.16" y="-16.51" drill="1.27" shape="square"/>
+<pad name="A6_IO14" x="10.16" y="-13.97" drill="1.27" shape="square"/>
+<pad name="A7_IO32" x="10.16" y="-11.43" drill="1.27" shape="square"/>
+<pad name="A8_IO15" x="10.16" y="-8.89" drill="1.27" shape="square"/>
+<pad name="A9_IO33" x="10.16" y="-6.35" drill="1.27" shape="square"/>
+<pad name="A10_IO27" x="10.16" y="-3.81" drill="1.27" shape="square"/>
+<pad name="A11_IO12" x="10.16" y="-1.27" drill="1.27" shape="square"/>
+<pad name="A12_IO13" x="10.16" y="1.27" drill="1.27" shape="square"/>
+<pad name="VBUS" x="10.16" y="3.81" drill="1.27" shape="square"/>
+<pad name="EN" x="10.16" y="6.35" drill="1.27" shape="square"/>
+<pad name="VBAT" x="10.16" y="8.89" drill="1.27" shape="square"/>
 <text x="12.7" y="-19.05" size="1.27" layer="21" align="center-left">SDA</text>
 <text x="12.7" y="-16.51" size="1.27" layer="21" align="center-left">SCL</text>
 <text x="12.7" y="-13.97" size="1.27" layer="21" align="center-left">A6_IO14</text>
@@ -326,7 +332,7 @@
 </package>
 </packages>
 <packages3d>
-<package3d name="ESP32_FEATHER" urn="urn:adsk.eagle:package:5613287/1" type="box" library_version="56">
+<package3d name="ESP32_FEATHER" urn="urn:adsk.eagle:package:5613287/2" type="box" library_version="62">
 <packageinstances>
 <packageinstance name="ESP32_FEATHER"/>
 </packageinstances>
@@ -618,92 +624,92 @@ design rules under a new name.</description>
 <element name="IO20" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="C2_IO_VIAS" package3d_urn="urn:adsk.eagle:package:7453304/5" value="C2_IO" x="81.28" y="10.16" smashed="yes">
 <attribute name="NAME" x="81.28" y="24.765" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="IC1" library="VCO-Eagle_parts" library_urn="urn:adsk.eagle:library:4288890" package="ESP32_FEATHER" package3d_urn="urn:adsk.eagle:package:5613287/1" value="FEATHER-ESP32" x="27.94" y="67.31" smashed="yes" rot="R90">
+<element name="IC1" library="VCO-Eagle_parts" library_urn="urn:adsk.eagle:library:4288890" package="ESP32_FEATHER" package3d_urn="urn:adsk.eagle:package:5613287/2" value="FEATHER-ESP32" x="27.94" y="67.31" smashed="yes" rot="R90">
 <attribute name="NAME" x="8.89" y="81.28" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="55.88" y="55.88" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="JP1" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="19.05" y="90.17" smashed="yes" rot="R90">
+<element name="JP1" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="19.05" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="19.05" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP2" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="21.59" y="90.17" smashed="yes" rot="R90">
+<element name="JP2" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="21.59" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="21.59" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP3" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="24.13" y="90.17" smashed="yes" rot="R90">
+<element name="JP3" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="24.13" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="24.13" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP4" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="26.67" y="90.17" smashed="yes" rot="R90">
+<element name="JP4" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="26.67" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="26.67" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP5" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="29.21" y="90.17" smashed="yes" rot="R90">
+<element name="JP5" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="29.21" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="29.21" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP6" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="31.75" y="90.17" smashed="yes" rot="R90">
+<element name="JP6" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="31.75" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="31.75" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP7" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="34.29" y="90.17" smashed="yes" rot="R90">
+<element name="JP7" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="34.29" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="34.29" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP8" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="36.83" y="90.17" smashed="yes" rot="R90">
+<element name="JP8" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="36.83" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="36.83" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP9" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="39.37" y="90.17" smashed="yes" rot="R90">
+<element name="JP9" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="39.37" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="39.37" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP10" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="41.91" y="90.17" smashed="yes" rot="R90">
+<element name="JP10" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="41.91" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="41.91" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP11" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="44.45" y="90.17" smashed="yes" rot="R90">
+<element name="JP11" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="44.45" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="44.45" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP12" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="46.99" y="90.17" smashed="yes" rot="R90">
+<element name="JP12" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="46.99" y="90.17" smashed="yes" rot="R90">
 <attribute name="NAME" x="46.99" y="92.71" size="1.27" layer="21" rot="R90" align="center-left"/>
 </element>
-<element name="JP13" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="46.99" y="44.45" smashed="yes" rot="R270">
+<element name="JP13" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="46.99" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="46.99" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP14" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="44.45" y="44.45" smashed="yes" rot="R270">
+<element name="JP14" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="44.45" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="44.45" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP15" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="41.91" y="44.45" smashed="yes" rot="R270">
+<element name="JP15" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="41.91" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="41.91" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP16" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="39.37" y="44.45" smashed="yes" rot="R270">
+<element name="JP16" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="39.37" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="39.37" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP17" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="36.83" y="44.45" smashed="yes" rot="R270">
+<element name="JP17" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="36.83" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="36.83" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP18" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="34.29" y="44.45" smashed="yes" rot="R270">
+<element name="JP18" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="34.29" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="34.29" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP19" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="31.75" y="44.45" smashed="yes" rot="R270">
+<element name="JP19" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="31.75" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="31.75" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP20" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="29.21" y="44.45" smashed="yes" rot="R270">
+<element name="JP20" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="29.21" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="29.21" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP21" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="26.67" y="44.45" smashed="yes" rot="R270">
+<element name="JP21" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="26.67" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="26.67" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP22" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="24.13" y="44.45" smashed="yes" rot="R270">
+<element name="JP22" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="24.13" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="24.13" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP23" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="21.59" y="44.45" smashed="yes" rot="R270">
+<element name="JP23" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="21.59" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.59" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP24" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="19.05" y="44.45" smashed="yes" rot="R270">
+<element name="JP24" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="19.05" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="19.05" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP25" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="16.51" y="44.45" smashed="yes" rot="R270">
+<element name="JP25" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="16.51" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="16.51" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP26" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="13.97" y="44.45" smashed="yes" rot="R270">
+<element name="JP26" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="13.97" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="13.97" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP27" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="11.43" y="44.45" smashed="yes" rot="R270">
+<element name="JP27" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="11.43" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="11.43" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
-<element name="JP28" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/1" value="PROTO_VIA_COMPACT" x="8.89" y="44.45" smashed="yes" rot="R270">
+<element name="JP28" library="VanEagleLib" library_urn="urn:adsk.eagle:library:5408729" package="PROTO_VIA" package3d_urn="urn:adsk.eagle:package:7615393/3" value="PROTO_VIA_COMPACT" x="8.89" y="44.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="8.89" y="41.91" size="1.27" layer="21" rot="R270" align="center-left"/>
 </element>
 </elements>
